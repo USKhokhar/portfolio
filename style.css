@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
-
 /* VARIABLES */
 :root {
     --pop: 'Poppins', sans-serif;
@@ -50,14 +49,41 @@
     font-weight: 600;
 }
 
+.home-txt p {
+    font: normal 200 1.2em/1.5em var(--pop);
+}
+
+.name {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+h1 {
+    font: normal 600 2em/2.2em var(--mont);
+}
+
+
+.about-txt p {
+    font: normal 200 1em/1.4em var(--pop);
+    text-align: justify;
+    width: 95%;
+    max-width: 600px;
+}
+
+@media screen and (max-width: 347px) {
+    h1 {
+        text-align: center;
+    }
+}
+
 /* HEADER */
 header {
     position: fixed;
     width: 100%;
     display: flex;
     justify-content: flex-end;
-
     padding: 0.5em;
+    background: var(--beige);
 }
 
 @media screen and (max-width: 375px) {
@@ -81,18 +107,25 @@ nav ul {
     height: 100vh;
     background: var(--beige);
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 80%;
+.txt-container {
+    padding: 1em;
 }
+
+.card-container {
+    width: 80%;
+    min-width: 90%;
+    margin: auto;
+    display: flex;
+}
+
 
 /* IMAGES */
-.banner_img {
-    width: 95%;
-    max-width: 400px;
+img {
+    width: 15em;
+    text-align: center;
 }
