@@ -10,6 +10,24 @@
     --txt-hover: #333;
 }
 
+/* DESIGN SYSTEM CLASSES */
+.flex {
+    display: flex;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+
 /* GLOBAL */
 
 *,
@@ -36,7 +54,8 @@
 
 /* TYPOGRAPHY */
 
-.nav_link {
+.nav_link,
+.card-name {
     text-decoration: none;
     text-transform: capitalize;
     font: normal 300 1em/1.5em var(--mont);
@@ -44,6 +63,7 @@
     transition: 300ms;
 }
 
+.card-name:hover,
 .nav_link:hover {
     color: var(--txt-hover);
     font-weight: 600;
@@ -76,6 +96,15 @@ h1 {
     }
 }
 
+.contact-txt h1 {
+    font-size: 1.5em;
+}
+
+.contact-txt p {
+    font: normal 200 1em/1.2em var(--pop);
+    text-align: justify;
+}
+
 /* HEADER */
 header {
     position: fixed;
@@ -106,10 +135,16 @@ nav ul {
 #project {
     height: 100vh;
     background: var(--beige);
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+}
+
+#about,
+#project {
+    height: fit-content;
+}
+
+#project {
+    flex-direction: column;
 }
 
 .txt-container {
@@ -117,15 +152,29 @@ nav ul {
 }
 
 .card-container {
+    gap: 1em;
     width: 80%;
-    min-width: 90%;
-    margin: auto;
-    display: flex;
+    max-width: 800px;
+    padding: 1em;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact {
+    background: var(--beige-xx);
+}
+
+/* ICONS */
+
+.social-container {
+    gap: 1em;
+}
 
 /* IMAGES */
 img {
-    width: 15em;
+    width: 10em;
     text-align: center;
 }
