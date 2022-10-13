@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+/* VARIABLES */
+:root {
+    --pop: 'Poppins', sans-serif;
+    --mont: 'Montserrat', sans-serif;
+    --beige: #f5f5dc;
+    --beige-xx: #dbc8ac;
+    --txt: #000;
+    --txt-hover: #333;
+}
+
+/* GLOBAL */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    * {
+        font-size: 14px;
+    }
+}
+
+/* TYPOGRAPHY */
+
+.nav_link {
+    text-decoration: none;
+    text-transform: capitalize;
+    font: normal 300 1em/1.5em var(--mont);
+    color: var(--txt);
+    transition: 300ms;
+}
+
+.nav_link:hover {
+    color: var(--txt-hover);
+    font-weight: 600;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 0.5em;
+}
+
+@media screen and (max-width: 375px) {
+    header {
+        justify-content: center;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+
+    gap: 1em;
+}
+
+/* LAYOUT */
+
+#home,
+#about,
+#project {
+    height: 100vh;
+    background: var(--beige);
+    display: flex;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+/* IMAGES */
+.banner_img {
+    width: 95%;
+    max-width: 400px;
+}
