@@ -30,14 +30,13 @@
 
 /* GLOBAL */
 
-*,
-*::after,
-*::before {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 20px;
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 600px) {
@@ -58,7 +57,7 @@
 .card-name {
     text-decoration: none;
     text-transform: capitalize;
-    font: normal 300 1em/1.5em var(--mont);
+    font: normal 300 1rem/1.5rem var(--mont);
     color: var(--txt);
     transition: 300ms;
 }
@@ -70,21 +69,21 @@
 }
 
 .home-txt p {
-    font: normal 200 1.2em/1.5em var(--pop);
+    font: normal 200 1.2rem/1.5rem var(--pop);
 }
 
 .name {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
 h1 {
-    font: normal 600 2em/2.2em var(--mont);
+    font: normal 600 2rem/2.2rem var(--mont);
 }
 
 
 .about-txt p {
-    font: normal 200 1em/1.4em var(--pop);
+    font: normal 200 1rem/1.4rem var(--pop);
     text-align: justify;
     width: 95%;
     max-width: 600px;
@@ -97,11 +96,11 @@ h1 {
 }
 
 .contact-txt h1 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .contact-txt p {
-    font: normal 200 1em/1.2em var(--pop);
+    font: normal 200 1rem/1.2rem var(--pop);
     text-align: justify;
 }
 
@@ -111,7 +110,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: 0.5em;
+    padding: 0.5rem;
     background: var(--beige);
 }
 
@@ -125,37 +124,42 @@ nav ul {
     list-style: none;
     display: flex;
 
-    gap: 1em;
+    gap: 1rem;
 }
 
 /* LAYOUT */
+
+main {
+    display: flex;
+    width: 400vw;
+}
+
+@media screen and (max-width: px) {
+    main {
+        flex-direction: column;
+        width: fit-content;
+    }
+}
 
 #home,
 #about,
 #project {
     height: 100vh;
+    width: 100vw;
     background: var(--beige);
     justify-content: space-around;
 }
 
-#about,
-#project {
-    height: fit-content;
-}
-
-#project {
-    flex-direction: column;
-}
 
 .txt-container {
-    padding: 1em;
+    padding: 1rem;
 }
 
 .card-container {
-    gap: 1em;
+    gap: 1rem;
     width: 80%;
     max-width: 800px;
-    padding: 1em;
+    padding: 1rem;
 }
 
 .card {
@@ -163,18 +167,21 @@ nav ul {
     flex-direction: column;
 }
 
+
 #contact {
     background: var(--beige-xx);
+    width: 100vw;
+    margin: auto;
 }
 
 /* ICONS */
 
 .social-container {
-    gap: 1em;
+    gap: 1rem;
 }
 
 /* IMAGES */
 img {
-    width: 10em;
+    width: 10rem;
     text-align: center;
 }
