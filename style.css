@@ -4,10 +4,10 @@
 :root {
     --pop: 'Poppins', sans-serif;
     --mont: 'Montserrat', sans-serif;
-    --gradient-bg: linear-gradient(90deg, #00042880 0%, #004e9280 100%);
+    --gradient-bg: linear-gradient(90deg, #EC6EE6 0%, #000428 0.01%, #004e92 100%);
     --gradient-glass: linear-gradient(0deg, #ffffff0a, #ffffff0a), linear-gradient(179.48deg, #4517fc1f 15.64%, #1ce47814 53.99%, #42a9711d 99.88%);
     --btn-clr: #ffffff38;
-    --btn-hvr-clr: #81b1db9f;
+    --btn-hvr-clr: #02062e;
     --github: #6800FF;
     --linkedin: #00A0DC;
     --whatsapp: #25D366;
@@ -80,6 +80,8 @@ header {
     width: 25vw;
     height: 100vh;
     background: var(--gradient-glass);
+    position: fixed;
+    z-index: 1;
 }
 
 nav ul {
@@ -91,6 +93,14 @@ nav ul li {
     padding: 0.5rem 1rem;
     background: var(--btn-clr);
     border-radius: 8px;
+    margin: auto;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    background: var(--btn-hvr-clr);
+    border-radius: 0;
 }
 
 .nav-link {
@@ -123,13 +133,20 @@ nav ul li {
     }
 
     nav ul li {
-        border-radius: 50%;
+        border-radius: 100%;
     }
-
 
 }
 
 /* LAYOUTS */
+main {
+    background: var(--gradient-bg);
+}
+
+#home {
+    margin-left: 25vw;
+    height: 100vh;
+}
 
 /* ICONS */
 
