@@ -4,10 +4,18 @@
 :root {
     --pop: 'Poppins', sans-serif;
     --mont: 'Montserrat', sans-serif;
-    --beige: #f5f5dc;
-    --beige-xx: #dbc8ac;
-    --txt: #000;
-    --txt-hover: #333;
+    --gradient-bg: linear-gradient(90deg, #00042880 0%, #004e9280 100%);
+    --gradient-glass: linear-gradient(0deg, #ffffff0a, #ffffff0a), linear-gradient(179.48deg, #4517fc1f 15.64%, #1ce47814 53.99%, #42a9711d 99.88%);
+    --btn-clr: #ffffff38;
+    --btn-hvr-clr: #81b1db9f;
+    --github: #6800FF;
+    --linkedin: #00A0DC;
+    --whatsapp: #25D366;
+    --instagram: #E1306C;
+    --discord: #5865F2;
+    --icon-clr: #699BF7;
+    --txt-clr: #fff;
+    --heading-clr: #ffff00;
 }
 
 /* DESIGN SYSTEM CLASSES */
@@ -27,6 +35,22 @@
     flex-wrap: wrap;
 }
 
+.row {
+    flex-direction: row;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.j-between {
+    justify-content: space-between;
+}
+
+.j-around {
+    justify-content: space-around;
+}
+
 
 /* GLOBAL */
 
@@ -35,8 +59,6 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 20px;
-    scroll-behavior: smooth;
-    overflow: hidden;
 }
 
 @media screen and (max-width: 600px) {
@@ -53,11 +75,71 @@
 
 /* TYPOGRAPHY */
 
-
 /* HEADER */
+header {
+    width: 25vw;
+    height: 100vh;
+    background: var(--gradient-glass);
+}
 
-/* LAYOUT */
+nav ul {
+    list-style: none;
+    gap: 2.5rem;
+}
+
+nav ul li {
+    padding: 0.5rem 1rem;
+    background: var(--btn-clr);
+    border-radius: 8px;
+}
+
+.nav-link {
+    text-decoration: none;
+    gap: 1rem;
+}
+
+.nav-icons {
+    color: var(--icon-clr);
+    font-size: 1.5rem;
+}
+
+.nav-txt {
+    color: var(--icon-clr);
+    font: normal 300 1rem/1rem var(--mont);
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+    nav ul {
+        gap: 8rem;
+    }
+
+    .nav-txt {
+        display: none;
+    }
+
+    .nav-icons {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        border-radius: 50%;
+    }
+
+
+}
+
+/* LAYOUTS */
 
 /* ICONS */
 
 /* IMAGES */
+.hero-img {
+    height: 10rem;
+}
+
+@media screen and (max-width: 600px) {
+    .hero-img {
+        display: none;
+    }
+}
