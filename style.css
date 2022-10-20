@@ -60,6 +60,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 20px;
+    scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 600px) {
@@ -72,6 +73,16 @@
     * {
         font-size: 14px;
     }
+}
+
+::-webkit-scrollbar {
+    width: 0.2rem;
+    background: var(--github);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--instagram);
+    border-radius: 16px;
 }
 
 /* TYPOGRAPHY */
@@ -128,6 +139,20 @@ h2 {
 .name {
     font-size: 2rem;
     font-weight: 400;
+}
+
+h3 {
+    font: normal 500 1.5rem/2rem var(--mont);
+    background: var(--txt-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-txt {
+    font: normal 200 1rem/1.2rem var(--pop);
+    text-align: justify;
+    padding: 1rem 0;
+    color: var(--txt-clr);
 }
 
 /* HEADER */
@@ -198,7 +223,10 @@ main {
     background: var(--gradient-bg);
 }
 
-#home {
+#home,
+#about,
+#project,
+#contact {
     margin-left: 25vw;
     height: 100vh;
 }
@@ -206,6 +234,12 @@ main {
 .hero-txt {
     padding: 1rem;
 }
+
+.txt-container {
+    padding: 0.5rem 1rem;
+    margin: auto 0;
+}
+
 
 /* ICONS */
 .social-link {
