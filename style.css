@@ -19,6 +19,7 @@
     --txt-clr: #fff;
     --heading-clr: #ffff00;
     --dark: #333333;
+    --neon-border-color: #08f;
 }
 
 /* DESIGN SYSTEM CLASSES */
@@ -408,11 +409,51 @@ input[type="text"]:focus {
 
 
 /* IMAGES */
+.img-wrap,
+.hero-wrap {
+    border: 0.15rem solid var(--neon-border-color);
+    border-radius: 50%;
+    box-shadow: 0 0 .5rem var(--github),
+        inset 0 0 .5rem var(--instagram),
+        0 0 2rem var(--neon-border-color);
+    animation: spin 9s infinite;
+}
+
+@keyframes spin {
+
+    0%,
+    30%,
+    60%,
+    90% {
+        box-shadow: 0 0 .5rem var(--github),
+            inset 0 0 .5rem var(--instagram),
+            0 0 2rem var(--neon-border-color);
+    }
+
+    10%,
+    40%,
+    70%,
+    100% {
+        box-shadow: 0 0 .5rem var(--whatsapp),
+            inset 0 0 .5rem var(--discord),
+            0 0 2rem var(--gradient-bg);
+    }
+
+    20%,
+    50%,
+    80% {
+        box-shadow: 0 0 .5rem var(--form-bg),
+            inset 0 0 .5rem var(--whatsapp),
+            0 0 2rem var(--heading-clr);
+    }
+}
+
 .hero-img {
     height: 10rem;
 }
 
-.banner-img {
+.banner-img,
+.img-wrap {
     display: none;
 }
 
@@ -422,13 +463,16 @@ input[type="text"]:focus {
 
 
 @media screen and (max-width: 600px) {
-    .hero-img {
+
+    .hero-img,
+    .hero-wrap {
         display: none;
     }
 
-    .banner-img {
+    .banner-img,
+    .img-wrap {
         display: block;
-        width: 10rem;
+        height: 15rem;
         margin: auto;
     }
 }
