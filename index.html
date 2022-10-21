@@ -9,99 +9,171 @@
     <title>U.S.KHOKHAR</title>
 </head>
 <body>
-    <header>
+    <header class="flex j-around a-center col">
+        <div class="hero-wrap">
+            <img src="./assets/my-img.svg" alt="" class="hero-img">
+        </div>
         <nav>
-            <ul>
-                <li><a href="#home" class="nav_link">home</a></li>
-                <li><a href="#about" class="nav_link">about</a></li>
-                <li><a href="#project" class="nav_link">projects</a></li>
-                <li><a href="#contact" class="nav_link">contact</a></li>
+            <ul class="flex col">
+                <li><a href="#home" class="nav-link flex row j-between a-center"><i class="fa-solid fa-home nav-icons"></i><span class="nav-txt">Home</span></a></li>
+                <li><a href="#about" class="nav-link flex row j-between a-center"><i class="fa-solid fa-address-card nav-icons"></i><span class="nav-txt">About</span></a></li>
+                <li><a href="#project" class="nav-link flex row j-between a-center"><i class="fa-solid fa-shapes nav-icons"></i><span class="nav-txt">Projects</span></a></li>
+                <li><a href="#contact" class="nav-link flex row j-between a-center"><i class="fa-solid fa-user nav-icons"></i><span class="nav-txt">Contact</span></a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- HOME -->
     <main>
-        <section id="home" class="flex wrap j-center a-center">
-            <img src="./assets/img-template-svg.svg" alt="banner image" class="banner-img">
-            <div class="txt-container home-txt">
-                <p>hi! I'm  <br>
-                    <strong><span class="name">Utkarsh Singh Khokhar</span></strong><br>
-                    and I <strong>create</strong> websites.
+        <!-- HOME -->
+        <section id="home" class="flex col j-around a-center">
+            <div class="banner">
+                <h1>Hello, World!</h1>
+                <div class="img-wrap">
+                    <img src="./assets/my-img.svg" alt="" class="banner-img">
+                </div>
+            </div>
+            
+            <div class="hero-txt">
+                <h2>
+                    hi! I'm <br>
+                    <span class="name">Utkarsh Singh Khokhar</span> <br>
+                    and I create websites. 
                     <i class="fa-regular fa-hand-peace"></i>
-                </p>
+                </h2>
+
+                <a href="#" target="_blank">
+                <button class="resume-btn">
+                        <i class="fa-regular fa-file"></i>
+                        Resume
+                    </button>
+                </a>
+            </div>
+
+            <div class="social-container flex j-center a-center wrap">
+                    <a class="social-link" href="mailto:usk172004@gmail.com">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+
+                    <a class="social-link" href="https://wa.me/919548010814?text=Hey%20there%21" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a class="social-link" href="https://discordapp.com/users/USK#8284" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+
+                    <a class="social-link" href="https://github.com/USKhokhar" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a class="social-link" href="https://www.linkedin.com/in/utkarsh-singh-khokhar-177662224/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                    <a class="social-link" href="https://www.instagram.com/u.s.khokhar/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
             </div>
         </section>
 
         <!-- ABOUT -->
-        <section id="about" class="flex wrap j-center a-center">
-                <div class="about-txt txt-container">
-                    <h1>What do I do?</h1>
-                    <p>Being an art enthusiast, I crave for creative explorations. I regularly sail my voyages in the vast oceans of ingenuity. As a result of which, I’m a guy who can design webpages for you. After designing your pages, you don’t need to look for a nerdy developer out there to build that page. I’m quite a narcissict when it comes to my work, so why would I give my design to other guy for developement. Considering all of that, I’m a front-end developer who can make your own website go live on the interenet. But what about the content you are going to showcase on your website... don’t worry, I got you covered. Your little man over here is an avid reader and occasional writer. 
-                    <br>
-                    So basically, I’ve got what it takes to give you all that you need! 
+        <section id="about">
+            <article class="txt-container">
+                <h3>What do I do?</h3>
+                <p class="txt">
+                    Being an art enthusiast, I crave for creative explorations. I regularly sail my voyages in the vast oceans of ingenuity. As a result of which, I’m a guy who can design webpages for you. After designing your pages, you don’t need to look for a nerdy developer out there to build that page. I’m quite a narcissict when it comes to my work, so why would I give my design to other guy for developement. Considering all of that, I’m a front-end developer who can make your own website go live on the interenet. But what about the content you are going to showcase on your website... don’t worry, I got you covered. Your little man over here is an avid reader and occasional writer.
                     <br><br>
+                    So basically, I’ve got what it takes to give you all that you need! 
+                    <br>
                     See you on the other side, mate!
-                    <br>
-                    <strong>brb :)</strong>
-                
-                    </p>
-                </div>
-                <img src="./assets/img-template-svg.svg" alt="" class="about-img banner-img">
+                    <br><br>
+                    <strong><i class="fa-regular fa-face-smile"></i></strong>
+                </p>
+            </article>
         </section>
 
-        <!-- PROJECT -->
-        <section id="project" class="flex wrap j-center a-center">
-                <h1 style="text-align: right;">What I've done</h1>
-
-                <div class="card-container flex wrap j-center a-center">
-                    <div class="card c-1">
-                        <img src="./assets/img-template-svg.svg" alt="" class="card-banner">
-                        <a href="#" target="_blank" class="card-name">Project Name</a>
-                    </div>
-                    <div class="card c-2">
-                        <img src="./assets/img-template-svg.svg" alt="" class="card-banner">
-                        <a href="#" target="_blank" class="card-name">Project Name</a>
-                    </div>
-                    <div class="card c-3">
-                        <img src="./assets/img-template-svg.svg" alt="" class="card-banner">
-                        <a href="#" target="_blank" class="card-name">Project Name</a>
-                    </div>
-                    <div class="card c-4">
-                        <img src="./assets/img-template-svg.svg" alt="" class="card-banner">
-                        <a href="#" target="_blank" class="card-name">Project Name</a>
-                    </div>
-                    <div class="card c-5">
-                        <img src="./assets/img-template-svg.svg" alt="" class="card-banner">
-                        <a href="#" target="_blank" class="card-name">Project Name</a>
-                    </div>
-                    <div class="card c-6">
-                        <img src="./assets/img-template-svg.svg" alt="" class="card-banner">
-                        <a href="#" target="_blank" class="card-name">Project Name</a>
-                    </div>
+        <!-- PROJECTS -->
+        <section id="project">
+            <article class="txt-container project-container flex col">
+                <h3 class="project-head">What I've done...</h3>
+                <div class="slider">
+                    <article class="card j-center a-center">
+                        <img src="./assets/img-template-svg.svg" alt="" class="project-img">
+                        <a href="#" class="project-link">Project Name</a>
+                    </article>
+                    <article class="card j-center a-center">
+                        <img src="./assets/img-template-svg.svg" alt="" class="project-img">
+                        <a href="#" class="project-link">Project Name</a>
+                    </article>
+                    <article class="card j-center a-center">
+                        <img src="./assets/img-template-svg.svg" alt="" class="project-img">
+                        <a href="#" class="project-link">Project Name</a>
+                    </article>
+                    <article class="card j-center a-center">
+                        <img src="./assets/img-template-svg.svg" alt="" class="project-img">
+                        <a href="#" class="project-link">Project Name</a>
+                    </article>
+                    <article class="card j-center a-center">
+                        <img src="./assets/img-template-svg.svg" alt="" class="project-img">
+                        <a href="#" class="project-link">Project Name</a>
+                    </article>
+                    <article class="card j-center a-center">
+                        <img src="./assets/img-template-svg.svg" alt="" class="project-img">
+                        <a href="#" class="project-link">Project Name</a>
+                    </article>
                 </div>
+            </article>
         </section>
+        
+        <!-- CONTACT -->
+        <section id="contact" class="flex wrap">
+            <article class="txt-container footer grid">
+                <h3>Contact Me</h3>
 
-        <!-- Contact -->
-        <footer id="contact">
-            <div class="txt-container contact-txt">
-                <h1>Wanna know me better?</h1>
-                <p>
+                <p class="txt">
                     You scrolled to the bottom... must’ve been curious about something. And I, being a very supportive person highyly bappreciate the process of resolving issues of curious beings. So please consider providing me the pleasure of resolving your stuff.
-                    <br>
+                    <br><br>
                     If not that, we can have a casual chit-chat... would be fun.
                 </p>
-            </div>
-            <div class="social-container flex a-center j-center">
-                <a href="" class="social-links"><i class="fa-brands  fa- fa-discord"></i></a>
-                <a href="" class="social-links"><i class="fa-brands  fa- fa-instagram"></i></a>
-                <a href="" class="social-links"><i class="fa-brands  fa- fa-linkedin"></i></a>
-                <a href="" class="social-links"><i class="fa-regular fa-  fa-envelope fa"></i></a>
-                <a href="" class="social-links"><i class="fa-brands  fa- fa-whatsapp"></i></a>
-                <a href="" class="social-links"><i class="fa-brands  fa- fa-github"></i></a>
-            </div>
 
-        </footer>
+                <div class="social-container flex j-center a-center wrap">
+                    <a class="social-link" href="mailto:usk172004@gmail.com">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+
+                    <a class="social-link" href="https://wa.me/919548010814?text=Hey%20there%21" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a class="social-link" href="https://discordapp.com/users/USK#8284" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+
+                    <a class="social-link" href="https://github.com/USKhokhar" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a class="social-link" href="https://www.linkedin.com/in/utkarsh-singh-khokhar-177662224/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                    <a class="social-link" href="https://www.instagram.com/u.s.khokhar/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </article>
+
+            <form action="mailto:usk172004@gmail.com" method="post" class="grid">
+                <h2>Fill out this form</h2>
+                <div class="input-container grid">
+                    <input type="text" name="full_name" id="fullName" placeholder="Enter Your Full Name">
+                    <input type="text" name="message" id="msg" placeholder="Enter Your Message">
+
+                    <input type="submit" value="Send" class="send-btn">
+                </div>
+            </form>
+        </section>
+
     </main>
 </body>
 </html>
