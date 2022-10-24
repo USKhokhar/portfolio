@@ -7,6 +7,7 @@
     --gradient-bg: linear-gradient(90deg, #EC6EE6 0%, #000428 0.01%, #004e92 100%);
     --gradient-glass: linear-gradient(0deg, #ffffff0a, #ffffff0a), linear-gradient(179.48deg, #4517fc1f 15.64%, #1ce47814 53.99%, #42a9711d 99.88%);
     --txt-gradient: -webkit-linear-gradient(#E1306C, #cb9ad4);
+    --glassmorph: rgba(255, 255, 255, 0.15);
     --form-bg: #d9d9d933;
     --btn-clr: #ffffff38;
     --btn-hvr-clr: #02062e;
@@ -65,19 +66,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 20px;
+    font-size: 16px;
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 600px) {
     * {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 375px) {
     * {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
@@ -161,15 +163,24 @@ h3 {
     color: var(--txt-clr);
 }
 
-
-.project-link {
+.see-more {
+    font: 200 normal 1.2rem/2rem var(--mont);
+    letter-spacing: 0.15rem;
+    color: var(--txt-clr);
     text-decoration: none;
-    font-size: 1rem !important;
+    transition: 300ms;
+    width: fit-content;
+}
+
+.see-more:hover {
+    letter-spacing: 0;
+    color: var(--heading-clr);
+    text-decoration: dashed;
 }
 
 /* HEADER */
 header {
-    width: 25vw;
+    width: 20vw;
     height: 100vh;
     background: var(--gradient-glass);
     position: fixed;
@@ -188,6 +199,7 @@ nav ul li {
     margin: auto;
     transition: 300ms;
     cursor: pointer;
+    width: 8.5rem;
 }
 
 nav ul li:hover {
@@ -211,6 +223,7 @@ nav ul li:hover {
     text-transform: uppercase;
 }
 
+
 @media screen and (max-width: 600px) {
     nav ul {
         gap: 8rem;
@@ -226,6 +239,7 @@ nav ul li:hover {
 
     nav ul li {
         border-radius: 100%;
+        width: fit-content;
     }
 
 }
@@ -233,6 +247,7 @@ nav ul li:hover {
 /* LAYOUTS */
 main {
     background: var(--gradient-bg);
+    height: 100vh;
 }
 
 #home,
@@ -252,23 +267,6 @@ main {
     margin: auto 0;
 }
 
-
-.project-container {
-    gap: 5rem;
-}
-
-.slider {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 1rem;
-    overflow-x: scroll;
-}
-
-.card {
-    display: grid;
-    gap: 1rem;
-    padding: 0 0.5rem 1rem;
-}
 
 @media screen and (min-width: 600px) {
     .footer {
@@ -409,42 +407,32 @@ input[type="text"]:focus {
 
 
 /* IMAGES */
-.img-wrap,
-.hero-wrap {
-    border: 0.15rem solid var(--neon-border-color);
-    border-radius: 50%;
-    box-shadow: 0 0 .5rem var(--github),
-        inset 0 0 .5rem var(--instagram),
-        0 0 2rem var(--neon-border-color);
-    animation: spin 9s infinite;
+.banner-img,
+.hero-img {
+    filter: drop-shadow(0 0 0 var(--btn-hvr-clr)) brightness(100%);
+    animation: spin 6s forwards 1s;
 }
 
 @keyframes spin {
 
-    0%,
-    30%,
-    60%,
-    90% {
-        box-shadow: 0 0 .5rem var(--github),
-            inset 0 0 .5rem var(--instagram),
-            0 0 2rem var(--neon-border-color);
+    0% {
+        filter: drop-shadow(0 0 0 var(--btn-hvr-clr)) brightness(0%);
     }
 
-    10%,
-    40%,
-    70%,
-    100% {
-        box-shadow: 0 0 .5rem var(--whatsapp),
-            inset 0 0 .5rem var(--discord),
-            0 0 2rem var(--gradient-bg);
+    20% {
+        filter: drop-shadow(1.5rem 1.5rem 0 var(--btn-hvr-clr)) brightness(20%);
     }
 
-    20%,
-    50%,
+    40% {
+        filter: drop-shadow(0rem 2rem 0 var(--btn-hvr-clr)) brightness(40%);
+    }
+
+    60% {
+        filter: drop-shadow(-1.5rem 1.5rem 0 var(--btn-hvr-clr)) brightness(60%);
+    }
+
     80% {
-        box-shadow: 0 0 .5rem var(--form-bg),
-            inset 0 0 .5rem var(--whatsapp),
-            0 0 2rem var(--heading-clr);
+        filter: drop-shadow(0 0 0 var(--btn-hvr-clr)) brightness(80%);
     }
 }
 
