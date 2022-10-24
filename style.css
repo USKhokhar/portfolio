@@ -68,7 +68,6 @@
     box-sizing: border-box;
     font-size: 16px;
     scroll-behavior: smooth;
-    overflow: hidden;
 }
 
 @media screen and (max-width: 600px) {
@@ -158,9 +157,11 @@ h3 {
 }
 
 .txt {
-    font: normal 200 1rem/1.2rem var(--pop);
+    font: normal 200 1rem/1.5rem var(--pop);
     text-align: justify;
     color: var(--txt-clr);
+    width: 100%;
+    max-width: 70vw;
 }
 
 .see-more {
@@ -170,6 +171,8 @@ h3 {
     text-decoration: none;
     transition: 300ms;
     width: fit-content;
+    position: absolute;
+    bottom: 2rem;
 }
 
 .see-more:hover {
@@ -199,7 +202,7 @@ nav ul li {
     margin: auto;
     transition: 300ms;
     cursor: pointer;
-    width: 8.5rem;
+    width: 9rem;
 }
 
 nav ul li:hover {
@@ -247,7 +250,6 @@ nav ul li:hover {
 /* LAYOUTS */
 main {
     background: var(--gradient-bg);
-    height: 100vh;
 }
 
 #home,
@@ -256,6 +258,7 @@ main {
 #contact {
     margin-left: 25vw;
     height: 100vh;
+    position: relative;
 }
 
 .hero-txt {
@@ -380,6 +383,7 @@ input[type="text"]:focus {
     border-radius: 8px;
     cursor: pointer;
     transition: 300ms;
+    text-decoration: none;
 }
 
 .resume-btn:hover,
@@ -403,6 +407,15 @@ input[type="text"]:focus {
     background: var(--btn-hvr-clr);
     color: var(--heading-clr);
     transition: 300ms;
+}
+
+.container {
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.proj-cont {
+    gap: 0.5rem;
 }
 
 
