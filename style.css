@@ -172,7 +172,7 @@ h3 {
     transition: 300ms;
     width: fit-content;
     position: absolute;
-    bottom: 2rem;
+    bottom: 4rem;
 }
 
 .see-more:hover {
