@@ -252,11 +252,34 @@ main {
     background: var(--gradient-bg);
 }
 
+@media screen and (min-width: 600px) {
+    * {
+        overflow: hidden;
+    }
+
+    main {
+        display: grid;
+        grid-auto-flow: column;
+        width: 500vw;
+        height: 100vh;
+    }
+
+    #home,
+    #about,
+    #project,
+    #contact {
+        padding-left: 25vw;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+}
+
 #home,
 #about,
 #project,
 #contact {
-    margin-left: 25vw;
+    padding-left: 25vw;
     height: 100vh;
     position: relative;
 }
