@@ -5,6 +5,7 @@
     --pop: 'Poppins', sans-serif;
     --mont: 'Montserrat', sans-serif;
     --gradient-bg: linear-gradient(90deg, #EC6EE6 0%, #000428 0.01%, #004e92 100%);
+    --gradient-bg-mobile: linear-gradient(#EC6EE6 0%, #000428 0.01%, #004e92 100%);
     --gradient-glass: linear-gradient(0deg, #ffffff0a, #ffffff0a), linear-gradient(179.48deg, #4517fc1f 15.64%, #1ce47814 53.99%, #42a9711d 99.88%);
     --txt-gradient: -webkit-linear-gradient(#E1306C, #cb9ad4);
     --glassmorph: rgba(255, 255, 255, 0.15);
@@ -190,6 +191,8 @@ header {
     z-index: 1;
 }
 
+
+
 nav ul {
     list-style: none;
     gap: 2.5rem;
@@ -228,6 +231,11 @@ nav ul li:hover {
 
 
 @media screen and (max-width: 600px) {
+    nav {
+        opacity: 0;
+        transition: 1s;
+    }
+
     nav ul {
         gap: 8rem;
     }
@@ -248,8 +256,10 @@ nav ul li:hover {
 }
 
 /* LAYOUTS */
-main {
-    background: var(--gradient-bg);
+@media screen and (max-width: 600px) {
+    main {
+        background: var(--gradient-bg-mobile);
+    }
 }
 
 @media screen and (min-width: 600px) {
@@ -258,6 +268,7 @@ main {
     }
 
     main {
+        background: var(--gradient-bg);
         display: grid;
         grid-auto-flow: column;
         width: 500vw;
@@ -382,6 +393,14 @@ input[type="text"]:focus {
     gap: 2rem;
 }
 
+.fa-bars {
+    color: var(--txt-clr) !important;
+    font-size: 2rem;
+    position: absolute !important;
+    top: 1rem;
+    left: 1.6rem;
+}
+
 @media screen and (max-width: 600px) {
     .social-container {
         gap: 1rem;
@@ -498,5 +517,27 @@ input[type="text"]:focus {
         display: block;
         height: 15rem;
         margin: auto;
+    }
+}
+
+/* Hamburger Menu */
+
+#nav-toggle {
+    display: none;
+}
+
+.fa-bars:active {
+    transform: rotate(90deg);
+    transition: 300ms;
+}
+
+#nav-toggle:checked~nav {
+    opacity: 1;
+    transition: 1s;
+}
+
+@media screen and (min-width: 600px) {
+    .fa-bars {
+        display: none;
     }
 }
