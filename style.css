@@ -232,8 +232,7 @@ nav ul li:hover {
 
 @media screen and (max-width: 600px) {
     nav {
-        opacity: 0;
-        transition: 1s;
+        display: none;
     }
 
     nav ul {
@@ -538,8 +537,17 @@ input[type="text"]:focus {
 }
 
 #nav-toggle:checked~nav {
-    opacity: 1;
-    transition: 1s;
+    display: block;
+    animation: fade 1s;
+}
+
+@keyframes {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 @media screen and (min-width: 600px) {
