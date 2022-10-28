@@ -10,9 +10,13 @@
 </head>
 <body>
     <header class="flex j-around a-center col">
-        <div class="hero-wrap">
-            <img src="./assets/my-img.svg" alt="" class="hero-img">
-        </div>
+        <img src="./assets/my-img.svg" alt="" class="hero-img">
+
+        <input type="checkbox" name="nav-bars" id="nav-toggle">
+        <label for="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
         <nav>
             <ul class="flex col">
                 <li><a href="#home" class="nav-link flex row j-between a-center"><i class="fa-solid fa-home nav-icons"></i><span class="nav-txt">Home</span></a></li>
@@ -28,9 +32,7 @@
         <section id="home" class="flex col j-around a-center">
             <div class="banner">
                 <h1>Hello, World!</h1>
-                <div class="img-wrap">
-                    <img src="./assets/my-img.svg" alt="" class="banner-img">
-                </div>
+                <img src="./assets/my-img.svg" alt="" class="banner-img">
             </div>
             
             <div class="hero-txt">
@@ -41,7 +43,7 @@
                     <i class="fa-regular fa-hand-peace"></i>
                 </h2>
 
-                <a href="#" target="_blank">
+                <a href="./coming-soon.html" target="_blank">
                 <button class="resume-btn">
                         <i class="fa-regular fa-file"></i>
                         Resume
@@ -94,34 +96,22 @@
 
         <!-- PROJECTS -->
         <section id="project">
-            <article class="txt-container project-container flex col">
-                <h3 class="project-head">What I've done...</h3>
-                <div class="slider">
-                    <article class="card j-center a-center">
-                        <img src="./assets/img-template-svg.svg" alt="" class="project-img">
-                        <a href="#" class="project-link">Project Name</a>
-                    </article>
-                    <article class="card j-center a-center">
-                        <img src="./assets/img-template-svg.svg" alt="" class="project-img">
-                        <a href="#" class="project-link">Project Name</a>
-                    </article>
-                    <article class="card j-center a-center">
-                        <img src="./assets/img-template-svg.svg" alt="" class="project-img">
-                        <a href="#" class="project-link">Project Name</a>
-                    </article>
-                    <article class="card j-center a-center">
-                        <img src="./assets/img-template-svg.svg" alt="" class="project-img">
-                        <a href="#" class="project-link">Project Name</a>
-                    </article>
-                    <article class="card j-center a-center">
-                        <img src="./assets/img-template-svg.svg" alt="" class="project-img">
-                        <a href="#" class="project-link">Project Name</a>
-                    </article>
-                    <article class="card j-center a-center">
-                        <img src="./assets/img-template-svg.svg" alt="" class="project-img">
-                        <a href="#" class="project-link">Project Name</a>
-                    </article>
+            <article class="txt-container">
+                <h3>What I've done...</h3>
+
+                <div class="container flex wrap j-around a-center" >
+                    <div class="proj-cont grid">
+                        <img src="./assets/calculator.JPG" alt="" class="project-img">
+                        <a href="https://calculator-usk.netlify.app/" class="project-link">Calculator</a>
+                    </div>
+                    <div class="proj-cont grid">
+                        <img src="./assets/quote.JPG" alt="" class="project-img">
+                        <a href="https://quote-generator-usk.netlify.app/" class="project-link">Quote Generator</a>
+                    </div>
                 </div>
+
+                <a href="./coming-soon.html" class="see-more">See More &rAarr;</a>
+                
             </article>
         </section>
         
