@@ -365,6 +365,11 @@ input[type="text"]:focus {
     font-size: 2em;
 }
 
+.social-link:hover {
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
 .fa-whatsapp {
     color: var(--whatsapp);
 }
@@ -501,7 +506,8 @@ input[type="text"]:focus {
 }
 
 .project-img {
-    width: 10rem;
+    width: 12rem;
+    height: 15rem;
 }
 
 
