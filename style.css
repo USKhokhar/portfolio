@@ -541,7 +541,7 @@ input[type="text"]:focus {
     animation: fade 1s;
 }
 
-@keyframes {
+@keyframes fade{
     0%{
         opacity: 0;
     }
